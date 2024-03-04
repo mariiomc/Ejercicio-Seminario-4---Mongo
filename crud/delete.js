@@ -1,7 +1,9 @@
 const User = require('../models/collection1');
 const Car = require('../models/collection2');
+require('../connection')
 
-const someFunction = async () => {
+
+const deleteOne = async () => {
     const user = await User.findOne({ nombre: 'Isidoro' });
 
     if (!user) {
@@ -13,4 +15,4 @@ const someFunction = async () => {
     console.log(result);
 };
 
-someFunction().catch(err => console.error(err));
+deleteOne();

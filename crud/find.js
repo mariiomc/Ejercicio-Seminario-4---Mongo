@@ -1,7 +1,9 @@
 const User = require('../models/collection1');
 const Car = require('../models/collection2');
+require('../connection')
 
-const searchProducts = async () => {
+
+const searchOne = async () => {
     const users = await User.find({});
     const cars = await Car.find({});
 
@@ -9,4 +11,4 @@ const searchProducts = async () => {
     console.log(cars);
 };
 
-searchProducts();
+searchOne();

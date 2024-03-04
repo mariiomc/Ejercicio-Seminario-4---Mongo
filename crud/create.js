@@ -1,7 +1,9 @@
 const User = require('../models/collection1');
 const Car = require('../models/collection2');
+require('../connection')
 
-const someFunction = async () => {
+
+const createUserAndCar = async () => {
     const user1 = new User({
         nombre: 'Juan',
         email: 'juan@gmail.com',
@@ -17,4 +19,4 @@ const someFunction = async () => {
     await car1.save();
 };
 
-someFunction().catch(err => console.error(err));
+createUserAndCar();

@@ -1,7 +1,9 @@
 const User = require('../models/collection1');
 const Car = require('../models/collection2');
+require('../connection')
 
-const someFunction = async () => {
+
+const updateOne = async () => {
     const user = await User.findOneAndUpdate(
         { username: 'Mario' }, 
         { nombre: 'Alberto' },
@@ -10,4 +12,4 @@ const someFunction = async () => {
     console.log(user);
 };
 
-someFunction().catch(err => console.error(err));
+updateOne();
